@@ -25,7 +25,7 @@ def read(*names, **kwargs):
 
 setup(
     name='coinstac-remote-pdb',
-    version='1.3.0',
+    version='1.3.1',
     license='BSD 2-Clause License',
     description='Coinstac revision with removed stdout calls. Remote vanilla PDB (over TCP sockets) *done right*: no extras, proper handling around connection '
                 'failures and CI. Based on `pdbx <https://pypi.python.org/pypi/pdbx>`_.',
