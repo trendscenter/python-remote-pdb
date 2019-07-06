@@ -24,10 +24,10 @@ def read(*names, **kwargs):
 
 
 setup(
-    name='remote-pdb',
+    name='coinstac-remote-pdb',
     version='1.3.0',
     license='BSD 2-Clause License',
-    description='Remote vanilla PDB (over TCP sockets) *done right*: no extras, proper handling around connection '
+    description='Coinstac revision with removed stdout calls. Remote vanilla PDB (over TCP sockets) *done right*: no extras, proper handling around connection '
                 'failures and CI. Based on `pdbx <https://pypi.python.org/pypi/pdbx>`_.',
     long_description='%s\n%s' % (
         re.compile('^.. start-badges.*^.. end-badges', re.M | re.S).sub('', read('README.rst')),
@@ -35,7 +35,7 @@ setup(
     ),
     author='Ionel Cristian Mărieș',
     author_email='contact@ionelmc.ro',
-    url='https://github.com/ionelmc/python-remote-pdb',
+    url='https://github.com/trendscenter/python-remote-pdb',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     py_modules=[splitext(basename(path))[0] for path in glob('src/*.py')],

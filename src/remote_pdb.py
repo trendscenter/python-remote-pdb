@@ -70,10 +70,8 @@ class RemotePdb(Pdb):
         listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
         listen_socket.bind((host, port))
-        cry("RemotePdb session open at %s:%s, waiting for connection ..." % listen_socket.getsockname())
         listen_socket.listen(1)
         connection, address = listen_socket.accept()
-        cry("RemotePdb accepted connection from %s." % repr(address))
         self.handle = LF2CRLF_FileWrapper(connection)
         Pdb.__init__(self, completekey='tab', stdin=self.handle, stdout=self.handle)
         self.backup = []
